@@ -22,21 +22,33 @@ export const Route = createFileRoute('/login')({
 import { AuthForm } from '@/components/auth/auth-form'
 import { SiteHeader } from '@/components/landing/site-header'
 import { Hero } from '@/components/landing/hero'
+import { Showcase } from '@/components/landing/showcase'
+import { Features } from '@/components/landing/features'
+import { HowItWorks } from '@/components/landing/how-it-works'
+import { People } from '@/components/landing/people'
+import { PricingCta } from '@/components/landing/pricing-cta'
+import { SiteFooter } from '@/components/landing/site-footer'
 
 function LoginPage() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* The landing page stays visible behind the sign-in dialog */}
-      <main className="landing-page pointer-events-none min-h-screen" aria-hidden>
-        <div className="hero-pastel min-h-screen">
+    <div className="relative min-h-screen">
+      <main className="landing-page min-h-screen" aria-hidden>
+        <div className="hero-pastel">
           <SiteHeader />
           <Hero />
         </div>
+        <div className="landing-light">
+          <Showcase />
+          <Features />
+          <HowItWorks />
+          <People />
+          <PricingCta />
+          <SiteFooter />
+        </div>
       </main>
 
-      {/* Transparent scrim: the landing page stays fully visible behind the dialog */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto px-6 py-12">
-        <div className="login-light w-full max-w-[420px]">
+      <div className="pointer-events-none fixed inset-0 z-[60] flex items-center justify-center px-4 py-6 sm:px-6 sm:py-10">
+        <div className="login-light pointer-events-auto w-full max-w-[420px]">
           <AuthForm />
         </div>
       </div>

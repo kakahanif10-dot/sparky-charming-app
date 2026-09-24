@@ -6,6 +6,7 @@ import { Showcase } from "@/components/landing/showcase";
 import { Features } from "@/components/landing/features";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { PricingCta } from "@/components/landing/pricing-cta";
+import { People } from "@/components/landing/people";
 import { SiteFooter } from "@/components/landing/site-footer";
 
 const title = "SUPERINTELLIGENS — Build software with AI";
@@ -39,6 +40,7 @@ function HomePage() {
         <Showcase />
         <Features />
         <HowItWorks />
+        <People />
         <PricingCta />
         <SiteFooter />
       </div>
